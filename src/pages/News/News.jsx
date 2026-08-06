@@ -3,6 +3,15 @@ import Button from "../../components/Button/Button";
 
 const now = Date.now();
 
+// links de referência por esporte (fontes regionais reais — PortalR3)
+const LINKS = {
+  "vôlei":
+    "https://www.portalr3.com.br/2026/03/24/temporada-esportiva-taubate-2026-fadat",
+  handebol:
+    "https://www.portalr3.com.br/2026/05/23/handebol-taubate-estreia-neste-sabado-23-na-liga-nacional-contra-pinheiros",
+  "tênis de mesa": "https://www.portalr3.com.br/editoria/esportes/tenis-de-mesa",
+};
+
 // lista de notícias — adicione novos itens aqui (cada card usa esses dados)
 const noticias = [
   {
@@ -149,7 +158,7 @@ const noticias = [
     resumo: "acordo reforça estrutura da equipe para a próxima temporada.",
     publicadoEm: new Date(now - 58 * 60 * 60 * 1000), // há 2 dias e 10h
   },
-];
+].map((noticia) => ({ ...noticia, link: LINKS[noticia.esporte] }));
 
 // transforma a diferença de tempo em texto tipo "há 2 min", "há 3 h", "agora"
 function formatarTempo(data, agora) {
@@ -225,9 +234,14 @@ function News() {
                       taubaté • {formatarTempo(noticia.publicadoEm, agora)}
                     </p>
 
-                    <button className="mt-4 uppercase text-blue-400 hover:text-blue-300 text-xs font-bold tracking-wide transition-colors duration-300">
+                    <a
+                      href={noticia.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block uppercase text-blue-400 hover:text-blue-300 text-xs font-bold tracking-wide transition-colors duration-300"
+                    >
                       ver mais →
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}

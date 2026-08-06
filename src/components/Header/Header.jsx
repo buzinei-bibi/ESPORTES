@@ -42,29 +42,29 @@ export default function Header() {
           </div>
           {/* coluna central: pesquisa */}
           <div className="justify-self-stretch md:justify-self-start lg:justify-self-center w-full flex justify-center md:justify-start lg:justify-center min-w-0">
-            <div className="flex items-center bg-black border border-white/10 focus-within:border-blue-400/60 rounded-xl md:rounded-2xl px-3 md:px-4 h-10 md:h-12 lg:h-14 w-full max-w-[160px] sm:max-w-[220px] md:max-w-[220px] lg:max-w-md xl:max-w-lg min-w-0 transition-colors duration-200 shadow-inner">
+            <div className="flex items-center bg-black border border-white/10 focus-within:border-blue-400/60 rounded-xl md:rounded-2xl px-3 md:px-4 h-10 md:h-12 lg:h-14 w-full max-w-40 sm:max-w-55 md:max-w-55 lg:max-w-md xl:max-w-lg min-w-0 transition-colors duration-200 shadow-inner">
               <i className="bi bi-search text-white/80 mr-2 md:mr-3 shrink-0 text-sm md:text-lg"></i>
+{/* MOBILE: só até 767px */}
+<input
+  type="text"
+  placeholder="pesquise"
+  className="block md:hidden bg-transparent outline-none text-white placeholder-white/80 text-xs w-full min-w-0 uppercase"
+/>
 
-              {/* MOBILE: só até 767px */}
-              <input
-                type="text"
-                placeholder="pesquise"
-                className="block md:hidden bg-transparent outline-none text-white placeholder-white/80 text-xs w-full min-w-0 uppercase"
-              />
+{/* TABLET: 768px até 1279px */}
+<input
+  type="text"
+  placeholder="pesquise aqui"
+  className="hidden md:block xl:hidden bg-transparent outline-none text-white placeholder-white/80 text-sm w-full min-w-0 uppercase"
+/>
 
-              {/* TABLET: 768px até 1023px */}
-              <input
-                type="text"
-                placeholder="pesquise aqui "
-                className="hidden md:block lg:hidden bg-transparent outline-none text-white placeholder-white/80 text-sm w-full min-w-0 uppercase"
-              />
+{/* DESKTOP: 1280px+ */}
+<input
+  type="text"
+  placeholder="pesquise por partidas, competições, times..."
+  className="hidden xl:block bg-transparent outline-none text-white placeholder-white/60 text-base w-full min-w-0 normal-case tracking-normal"
+/>
 
-              {/* DESKTOP: 1024px+ */}
-              <input
-                type="text"
-                placeholder="pesquise por partidas, competições, times..."
-                className="hidden lg:block bg-transparent outline-none text-white placeholder-white/60 text-base w-full min-w-0 normal-case tracking-normal"
-              />
             </div>
           </div>
 

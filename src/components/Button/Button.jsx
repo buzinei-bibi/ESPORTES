@@ -272,10 +272,10 @@ function Button() {
       {/* botão de acessibilidade */}
       <button
         onClick={() => setMenuAcessibilidade(true)}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-800 border-4 border-blue-800 shadow-2xl flex items-center justify-center hover:bg-blue-700 transition-all"
+        className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-50 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-blue-800 border-4 border-blue-800 shadow-2xl flex items-center justify-center hover:bg-blue-700 transition-all"
       >
-        <Accessibility size={26} className="sm:hidden" />
-        <Accessibility size={30} className="hidden sm:block" />
+        <Accessibility size={20} className="sm:hidden" />
+        <Accessibility size={22} className="hidden sm:block" />
       </button>
 
       {menuAcessibilidade && (
@@ -334,20 +334,20 @@ function Button() {
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:gap-4 pl-4 sm:pl-5 pr-6 sm:pr-8 py-4 sm:py-5 overflow-y-auto h-[calc(100vh-96px)] sm:h-[calc(100vh-90px)]">
-          <Card icon={<Eye size={26} />} titulo="CONTRASTE +" ativo={contrasteAtivo} onClick={() => setContrasteAtivo((v) => !v)} />
-          <Card icon={<LinkIcon size={26} />} titulo="LINKS DESTACADOS" ativo={linksDestacados} onClick={() => setLinksDestacados((v) => !v)} />
-          <Card icon={<Type size={26} />} titulo={textoMaior > 0 ? `TEXTO MAIOR (${textoMaior}/3)` : "TEXTO MAIOR"} ativo={textoMaior > 0} onClick={() => setTextoMaior((v) => (v + 1) % 4)} />
-          <Card icon={<PauseCircle size={26} />} titulo="PARAR ANIMAÇÕES" ativo={pararAnimacoes} onClick={() => setPararAnimacoes((v) => !v)} />
-          <Card icon={<Image size={26} />} titulo="OCULTAR IMAGENS" ativo={ocultarImagens} onClick={() => setOcultarImagens((v) => !v)} />
-          <Card icon={<MousePointer2 size={26} />} titulo="CURSOR" ativo={cursorGrande} onClick={() => setCursorGrande((v) => !v)} />
-          <Card icon={<Droplets size={26} />} titulo="SATURAÇÃO" ativo={saturacao > 0} onClick={() => setSaturacao((v) => (v + 1) % 3)} />
-          <Card icon={<BookOpen size={26} />} titulo="FONTE PARA DISLEXIA" ativo={fonteDislexia} onClick={() => setFonteDislexia((v) => !v)} />
-          <Card icon={<ScanLine size={26} />} titulo="GUIA DE LEITURA" ativo={guiaLeitura} onClick={() => setGuiaLeitura((v) => !v)} />
-          <Card icon={<Image size={26} />} titulo="MÁSCARA DE LEITURA" ativo={mascaraLeitura} onClick={() => setMascaraLeitura((v) => !v)} />
-          <Card icon={<Palette size={26} />} titulo="AJUSTE DE CORES" ativo={ajusteCores > 0} onClick={() => setAjusteCores((v) => (v + 1) % 4)} />
-          <Card icon={<ZoomIn size={26} />} titulo={zoomPagina > 0 ? `ZOOM (${zoomPagina}/3)` : "ZOOM DA PÁGINA"} ativo={zoomPagina > 0} onClick={() => setZoomPagina((v) => (v + 1) % 4)} />
-          <Card icon={<Volume2 size={26} />} titulo="LEITOR DE TEXTO" ativo={leitorAtivo} onClick={() => setLeitorAtivo((v) => !v)} />
-          <Card icon={<Mic size={26} />} titulo="BUSCA POR VOZ" ativo={buscaVozAtiva} onClick={alternarBuscaPorVoz} />
+          <Card icon={<Eye size={20} />} titulo="CONTRASTE +" ativo={contrasteAtivo} onClick={() => setContrasteAtivo((v) => !v)} />
+          <Card icon={<LinkIcon size={20} />} titulo="LINKS DESTACADOS" ativo={linksDestacados} onClick={() => setLinksDestacados((v) => !v)} />
+          <Card icon={<Type size={20} />} titulo={textoMaior > 0 ? `TEXTO MAIOR (${textoMaior}/3)` : "TEXTO MAIOR"} ativo={textoMaior > 0} onClick={() => setTextoMaior((v) => (v + 1) % 4)} />
+          <Card icon={<PauseCircle size={20} />} titulo="PARAR ANIMAÇÕES" ativo={pararAnimacoes} onClick={() => setPararAnimacoes((v) => !v)} />
+          <Card icon={<Image size={20} />} titulo="OCULTAR IMAGENS" ativo={ocultarImagens} onClick={() => setOcultarImagens((v) => !v)} />
+          <Card icon={<MousePointer2 size={20} />} titulo="CURSOR" ativo={cursorGrande} onClick={() => setCursorGrande((v) => !v)} />
+          <Card icon={<Droplets size={20} />} titulo="SATURAÇÃO" ativo={saturacao > 0} onClick={() => setSaturacao((v) => (v + 1) % 3)} />
+          <Card icon={<BookOpen size={20} />} titulo="FONTE PARA DISLEXIA" ativo={fonteDislexia} onClick={() => setFonteDislexia((v) => !v)} />
+          <Card icon={<ScanLine size={20} />} titulo="GUIA DE LEITURA" ativo={guiaLeitura} onClick={() => setGuiaLeitura((v) => !v)} />
+          <Card icon={<Image size={20} />} titulo="MÁSCARA DE LEITURA" ativo={mascaraLeitura} onClick={() => setMascaraLeitura((v) => !v)} />
+          <Card icon={<Palette size={20} />} titulo="AJUSTE DE CORES" ativo={ajusteCores > 0} onClick={() => setAjusteCores((v) => (v + 1) % 4)} />
+          <Card icon={<ZoomIn size={20} />} titulo={zoomPagina > 0 ? `ZOOM (${zoomPagina}/3)` : "ZOOM DA PÁGINA"} ativo={zoomPagina > 0} onClick={() => setZoomPagina((v) => (v + 1) % 4)} />
+          <Card icon={<Volume2 size={20} />} titulo="LEITOR DE TEXTO" ativo={leitorAtivo} onClick={() => setLeitorAtivo((v) => !v)} />
+          <Card icon={<Mic size={20} />} titulo="BUSCA POR VOZ" ativo={buscaVozAtiva} onClick={alternarBuscaPorVoz} />
 
           <button
             onClick={redefinirConfiguracoes}
@@ -366,12 +366,12 @@ function Card({ icon, titulo, ativo, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`h-28 sm:h-32 rounded-xl border transition flex flex-col justify-center items-center gap-2 sm:gap-3 p-2 ${
+      className={`h-20 sm:h-24 rounded-xl border transition flex flex-col justify-center items-center gap-1.5 sm:gap-1.5 p-2 ${
         ativo ? "bg-blue-600 border-blue-600" : "border-gray-600 bg-[#1f2436] hover:bg-blue-600"
       }`}
     >
-      <div>{icon}</div>
-      <span className="text-xs sm:text-sm font-semibold text-center px-1 sm:px-2 leading-tight">
+      <div className="sm:scale-90">{icon}</div>
+      <span className="text-[10px] sm:text-[10px] font-semibold text-center px-1 sm:px-2 leading-tight">
         {titulo}
       </span>
     </button>
