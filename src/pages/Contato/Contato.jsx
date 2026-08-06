@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 function Contato() {
   return (
     <>
-    <main className="max-w-[1600px] mx-auto px-6 pb-20 text-white uppercase">
+    <main className="max-w-400 mx-auto px-6 pb-20 text-white uppercase">
      {/* banner */}
 <section className="relative mt-10 min-h-80 rounded-[35px] overflow-hidden border border-blue-400/30 shadow-2xl shadow-blue-950/60 bg-slate-950">
   <div className="absolute inset-0 bg-linear-to-r from-slate-950 via-blue-950/90 to-transparent"></div>
